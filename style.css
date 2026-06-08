@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e8f0e8 0%, #d4e0d0 100%);
+    color: #2c3e2f;
+    line-height: 1.6;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+::selection {
+    background-color: #4a7c59;
+    color: #f5f0e0;
+}
+
+/* ШАПКА */
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #2d5a3b 0%, #1a3a2a 100%);
+    padding: 18px 40px;
+    border-radius: 60px;
+    margin-bottom: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #f5f0e0;
+}
+
+.logo i {
+    font-size: 32px;
+    color: #c8a86b;
+}
+
+.flex-nav ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+}
+
+.flex-nav ul li a {
+    color: #f5f0e0;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.flex-nav ul li a:hover,
+.flex-nav ul li a.active {
+    background: rgba(200, 168, 107, 0.2);
+    color: #c8a86b;
+}
+
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f5f0e0;
+    background: rgba(200, 168, 107, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+main:not(.gallery-container):not(.contacts-main) {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 45px 50px;
+    border-radius: 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #2d5a3b;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2d5a3b;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #c8a86b;
+    font-size: 28px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #3a5a40;
+}
+
+ul {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+ul li::marker {
+    color: #c8a86b;
+}
+
+/* ПОДВАЛ */
+footer:not(.gallery-footer):not(.contacts-footer) {
+    background: linear-gradient(135deg, #2d5a3b 0%, #1a3a2a 100%);
+    color: #f5f0e0;
+    text-align: center;
+    padding: 25px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .flex-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        border-radius: 35px;
+        padding: 20px;
+    }
+    
+    .flex-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    main:not(.gallery-container):not(.contacts-main) {
+        padding: 25px;
+    }
+}
